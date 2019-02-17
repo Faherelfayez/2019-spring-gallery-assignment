@@ -3,20 +3,51 @@
 //.document.ready.function (this means all the html is loaded on the document)
 
 
-$(document).ready((gallery) => {
 
- $('.slideshow') .on({mouseover: function(){
-
-
- }
-
- });
-
-
-
-	});  
 //. always define your variables IMPORTANT 
+
 //. this is the javascript 
+
+let slideShow = document.querySelectorAll('.slide'), 
+	buttonPrevious = document.querySelector('.previous'),
+	buttonNext = document.querySelector('.next'),
+	current - 0; 
+
+// Clear. all images 
+function reset () {
+	for(let i = 0; i < slideShow.length; i++){
+		slideShow[i].style.display = 'none' ; 
+	}
+}
+
+
+}
+//initial slide 
+function. startSlide(){
+	reset(); 
+	slideShow [0].style.display = 'block'
+}
+$(document).ready(function () {
+	$('.slideShow img').on( {
+
+		mouseover : function () {
+			$(this). css({
+				'cursor': 'pointer'
+			});
+		},
+		mouseout: function () {
+			$(this).css9{ 'cursor': default}
+		}); 
+
+	click: function () {
+		var imagUrl = $(this).attr('src');
+		$()
+	}
+	}); 
+ 
+
+
+ }); 
 
 //.selectt all the slides (grab them from html)(value of the variable will be an array which is the group of an image(pic and cpation and heading) that is getting pulled)
 
