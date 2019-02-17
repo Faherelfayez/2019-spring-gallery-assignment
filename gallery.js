@@ -1,8 +1,32 @@
 //. the info below are the steps we need to take before writing the code for javascript 
 
 //.document.ready.function (this means all the html is loaded on the document)
+$(document).ready(function () {
+$('.next').on('click' , function()
+	var currentImg = $('.active');
+	var nextImg = currentImg.next();
+
+	if(nextImg.length) {
+		currentImg.removeClass('active').css('z-index' , -10)
+		nextImg.addClass('active').css('z-index' , 10);
+	}
+
+		});
 
 
+$('.previous').on('click' , function()
+	var currentImg = $('.active');
+	var nextImg = currentImg.next();
+
+	if(nextImg.length) {
+		currentImg.removeClass('active').css('z-index' , -5)
+		previousImg.addClass('active').css('z-index' , 5);
+	}
+
+		});
+
+
+	});
 
 //. always define your variables IMPORTANT 
 
@@ -21,14 +45,15 @@ function reset () {
 }
 
 
-}
+
+
 //initial slide 
 function. startSlide(){
 	reset(); 
 	slideShow [0].style.display = 'block'
 }
-$(document).ready(function () {
-	$('.slideShow img').on( {
+
+	}); 
 
 		mouseover : function () {
 			$(this). css({
@@ -49,7 +74,8 @@ $(document).ready(function () {
 
  }); 
 
-//.selectt all the slides (grab them from html)(value of the variable will be an array which is the group of an image(pic and cpation and heading) that is getting pulled)
+//.selectt all the slides (grab them from html)(value of the variable will be an array 
+//.which is the group of an image(pic and cpation and heading) that is getting pulled)
 
 //. set the index slide (number) aka which slide we are starting with 
 
